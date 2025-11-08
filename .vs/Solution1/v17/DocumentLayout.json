@@ -3,52 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\libraryapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\libraryapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\repositories\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\repositories\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\repositories\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\repositories\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\repositories\\igenrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\repositories\\igenrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\logging\\customloggerproviderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\logging\\customloggerproviderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\logging\\customerlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\logging\\customerlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\models\\errordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\models\\errordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\extensions\\apiexceptionmiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\extensions\\apiexceptionmiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\logging\\customloggerprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\logging\\customloggerprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\filters\\apiloggingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\filters\\apiloggingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\filters\\apiexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\filters\\apiexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\controllers\\genrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\controllers\\genrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|c:\\users\\slped\\desktop\\libraryapi\\solution1\\libraryapi\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22016790-9CE7-40B6-BEE8-E822D57B172F}|LibraryApi\\LibraryApi.csproj|solutionrelative:libraryapi\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,151 +62,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ErrorDetails.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Models\\ErrorDetails.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Models\\ErrorDetails.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Models\\ErrorDetails.cs",
-              "RelativeToolTip": "LibraryApi\\Models\\ErrorDetails.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "LibraryApi\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "LibraryApi\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:18:47.661Z",
+              "WhenOpened": "2025-11-08T20:01:47.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomerLogger.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Logging\\CustomerLogger.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Logging\\CustomerLogger.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Logging\\CustomerLogger.cs",
-              "RelativeToolTip": "LibraryApi\\Logging\\CustomerLogger.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wCcAAAApAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "LibraryApi\\Repositories\\UnitOfWork\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeToolTip": "LibraryApi\\Repositories\\UnitOfWork\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:17:33.352Z",
+              "WhenOpened": "2025-11-08T20:01:24.088Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CustomLoggerProviderConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Logging\\CustomLoggerProviderConfiguration.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Logging\\CustomLoggerProviderConfiguration.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Logging\\CustomLoggerProviderConfiguration.cs",
-              "RelativeToolTip": "LibraryApi\\Logging\\CustomLoggerProviderConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "LibraryApi\\Repositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\Repository.cs",
+              "RelativeToolTip": "LibraryApi\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:17:18.1Z",
+              "WhenOpened": "2025-11-08T20:00:43.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomLoggerProvider.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Logging\\CustomLoggerProvider.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Logging\\CustomLoggerProvider.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Logging\\CustomLoggerProvider.cs",
-              "RelativeToolTip": "LibraryApi\\Logging\\CustomLoggerProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\IRepository.cs",
+              "RelativeDocumentMoniker": "LibraryApi\\Repositories\\IRepository.cs",
+              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\IRepository.cs",
+              "RelativeToolTip": "LibraryApi\\Repositories\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:16:56.807Z"
+              "WhenOpened": "2025-11-08T20:00:15.44Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LibraryApi.csproj",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\LibraryApi.csproj",
-              "RelativeDocumentMoniker": "LibraryApi\\LibraryApi.csproj",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\LibraryApi.csproj",
-              "RelativeToolTip": "LibraryApi\\LibraryApi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-08T19:16:24.465Z",
+              "DocumentIndex": 4,
+              "Title": "IGenreRepository.cs",
+              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\IGenreRepository.cs",
+              "RelativeDocumentMoniker": "LibraryApi\\Repositories\\IGenreRepository.cs",
+              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\IGenreRepository.cs",
+              "RelativeToolTip": "LibraryApi\\Repositories\\IGenreRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T19:59:39.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "LibraryApi\\Repositories\\IBookRepository.cs",
+              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\IBookRepository.cs",
+              "RelativeToolTip": "LibraryApi\\Repositories\\IBookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T19:59:01.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ApiLoggingFilter.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Filters\\ApiLoggingFilter.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Filters\\ApiLoggingFilter.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Filters\\ApiLoggingFilter.cs",
-              "RelativeToolTip": "LibraryApi\\Filters\\ApiLoggingFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\BookRepository.cs",
+              "RelativeDocumentMoniker": "LibraryApi\\Repositories\\BookRepository.cs",
+              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Repositories\\BookRepository.cs",
+              "RelativeToolTip": "LibraryApi\\Repositories\\BookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:16:00.296Z"
+              "WhenOpened": "2025-11-08T19:56:21.468Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApiExceptionFilter.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Filters\\ApiExceptionFilter.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Filters\\ApiExceptionFilter.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Filters\\ApiExceptionFilter.cs",
-              "RelativeToolTip": "LibraryApi\\Filters\\ApiExceptionFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:15:25.808Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApiExceptionMiddlewareExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
-              "RelativeToolTip": "LibraryApi\\Extensions\\ApiExceptionMiddlewareExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:14:45.411Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GenreController.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Controllers\\GenreController.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Controllers\\GenreController.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Controllers\\GenreController.cs",
-              "RelativeToolTip": "LibraryApi\\Controllers\\GenreController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:14:24.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Controllers\\BookController.cs",
-              "RelativeToolTip": "LibraryApi\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:14:09.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "LibraryApi\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "LibraryApi\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:12:13.879Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Program.cs",
               "RelativeDocumentMoniker": "LibraryApi\\Program.cs",
               "ToolTip": "C:\\Users\\slped\\Desktop\\LibraryAPI\\Solution1\\LibraryApi\\Program.cs",
               "RelativeToolTip": "LibraryApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:12:00.741Z",
+              "WhenOpened": "2025-11-08T19:55:07.878Z",
               "EditorCaption": ""
             }
           ]

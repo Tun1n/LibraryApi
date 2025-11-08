@@ -1,6 +1,8 @@
 using LibraryApi.Context;
 using LibraryApi.Filters;
 using LibraryApi.Logging;
+using LibraryApi.Repositories;
+using LibraryApi.Repositories.UnitOfWork;
 using LivrariaAPI.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
@@ -33,6 +35,14 @@ options.UseMySql(mysqlConnection,
 ServerVersion.AutoDetect(mysqlConnection)));
 
 builder.Services.AddScoped<ApiLoggingFilter>();
+
+builder.Services.AddScoped<IGenreRepository, GenreRepository>();
+
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration
 {
