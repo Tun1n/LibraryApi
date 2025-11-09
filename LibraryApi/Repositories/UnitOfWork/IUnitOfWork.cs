@@ -4,6 +4,6 @@
     {
         IBookRepository BookRepository { get; }
         IGenreRepository GenreRepository { get; }
-        public void Commit();
+        Task CommitAsync();
     }
 }

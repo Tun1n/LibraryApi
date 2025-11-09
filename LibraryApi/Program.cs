@@ -1,9 +1,10 @@
 using LibraryApi.Context;
+using LibraryApi.DTO.Mapping;
+using LibraryApi.Extensions;
 using LibraryApi.Filters;
 using LibraryApi.Logging;
 using LibraryApi.Repositories;
 using LibraryApi.Repositories.UnitOfWork;
-using LivrariaAPI.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -33,6 +34,8 @@ string mysqlConnection = builder.Configuration.GetConnectionString("DefaultConne
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseMySql(mysqlConnection,
 ServerVersion.AutoDetect(mysqlConnection)));
+
+builder.Services.AddAutoMapper(typeof(DomainToDTO));
 
 builder.Services.AddScoped<ApiLoggingFilter>();
 

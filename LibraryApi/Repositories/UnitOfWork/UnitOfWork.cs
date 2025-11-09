@@ -30,10 +30,9 @@ namespace LibraryApi.Repositories.UnitOfWork
                 return _GenreRepo = _GenreRepo ?? new GenreRepository(_context);
             }
         }
-
-        public void Commit()
+        public async Task CommitAsync()
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
         public void Dispose()
         {
