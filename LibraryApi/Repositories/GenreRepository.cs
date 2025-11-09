@@ -1,5 +1,6 @@
 ﻿using LibraryApi.Context;
 using LibraryApi.Models;
+using System.Reflection;
 
 namespace LibraryApi.Repositories
 {
@@ -7,6 +8,12 @@ namespace LibraryApi.Repositories
     {
         public GenreRepository(AppDbContext context) : base(context)
         {
+        }
+        public async Task<IEnumerable<Genre>> GetGenresByNameAsync(string genre)
+        {
+            var genres = await GetAllAsync();
+            var genresBy = genres.Where(g => g.Name == genre);
+            return genresBy;
         }
     }   
   

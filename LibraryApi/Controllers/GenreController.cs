@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LibraryApi.Models;
 using LibraryApi.Repositories.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,5 +16,96 @@ namespace LibraryApi.Controllers
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+
+        [HttpGet("Genres")]
+        public async Task<ActionResult<IEnumerable<Genre>>> GetAllGenresDetailsAsync()
+        {
+            var genres = await _unitOfWork.GenreRepository.GetAllAsync();
+
+            if (genres == null || !genres.Any())
+            {
+                return NotFound("Genres not found.");
+            }
+
+            return Ok(genres);
+        }
+
+        [HttpGet("GenreByIdDetails/{id}", Name = "GenreByIdDetails")]
+        public async Task<ActionResult<Genre>> GetGenreByIdAsync(int id)
+        {
+            var genre = await _unitOfWork.GenreRepository.GetAsync(g => g.GenreId == id);
+            if (genre == null)
+            {
+                return NotFound("Genre not found.");
+            }
+
+            return Ok(genre);
+        }
+
+        [HttpGet("Genre/{genreName}")]
+        public async Task<ActionResult<Genre>> GetGenreByNameAsync(string genreName)
+        {
+
+            var genre = await _unitOfWork.GenreRepository.GetGenresByNameAsync(genreName);
+            if (genre == null)
+            {
+                return NotFound("Genre not found.");
+            }
+            return Ok(genre);
+        }
+
+        // HTTP POST
+        [HttpPost("GenreByIdDetails")]
+
+        public async Task<ActionResult<Genre>> CreateGenreAsync([FromBody] Genre genre)
+        {
+            var genreExist = await _unitOfWork.GenreRepository.GetAsync(b => b.GenreId == genre.GenreId);
+            if (genre == null || genreExist != null)
+            {
+                return BadRequest("Invalid Operation");
+            }
+
+            var newGenre = _unitOfWork.GenreRepository.Create(genre);
+
+            await _unitOfWork.CommitAsync();
+
+            return new CreatedAtRouteResult("GenreByIdDetails", new { id = newGenre.GenreId }, newGenre);
+        }
+
+        // HTTP PUT
+        [HttpPut("{id:int}")]
+
+        public async Task<ActionResult<Genre>> Put(int id, Genre genre)
+        {
+            if (id != genre.GenreId)
+            {
+                return BadRequest();
+            }
+
+            var updated = _unitOfWork.GenreRepository.Update(genre);
+
+            await _unitOfWork.CommitAsync();
+
+            return Ok(updated);
+        }
+
+        // HTTP DELETE
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<Genre>> Delete(int id)
+        {
+            var genre = await _unitOfWork.GenreRepository.GetAsync(c => c.GenreId == id);
+            if (genre is null)
+            {
+                return NotFound("Genre not found");
+            }
+
+            var deleted = _unitOfWork.GenreRepository.Delete(genre);
+
+            await _unitOfWork.CommitAsync();
+
+            return Ok(deleted);
+        }
     }
 }
+
