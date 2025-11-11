@@ -2,6 +2,7 @@
 using LibraryApi.DTO;
 using LibraryApi.Models;
 using LibraryApi.Repositories.UnitOfWork;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +24,7 @@ namespace LibraryApi.Controllers
 
         // HTTP GET
         [HttpGet("BookDetails")]
+        [Authorize(Policy = "AdminOnly")]
 
         public async Task<ActionResult<IEnumerable<Book>>> GetAllBooksDetailsAsync()
         {
@@ -36,6 +38,7 @@ namespace LibraryApi.Controllers
 
 
         [HttpGet("BookByIdDetails/{id}", Name = "BookByIdDetails")]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<ActionResult<Book>> GetBookByIdDetailsAsync(int id)
         {
             var book = await _unitOfWork.BookRepository.GetAsync(b => b.BookId == id);
@@ -86,18 +89,6 @@ namespace LibraryApi.Controllers
             return Ok(booksDto);
         }
 
-        [HttpGet("Books/genre/{genreId:int}")]
-        public async Task<ActionResult<IEnumerable<BookDTO>>> GetBooksByGenreIdAsync(int genreId)
-        {
-            var books = await _unitOfWork.BookRepository.GetBooksByGenreIdAsync(genreId);
-            if (books == null || !books.Any())
-            {
-                return NotFound("Book not found");
-            }
-            var booksDto = _mapper.Map<IEnumerable<BookDTO>>(books);
-            return Ok(booksDto);
-        }
-
         [HttpGet("Books/year/{launchYear:int}")]
         public async Task<ActionResult<IEnumerable<BookDTO>>> GetBooksByYearLaunch(int launchYear)
         {
@@ -134,6 +125,7 @@ namespace LibraryApi.Controllers
         // HTTP POST
 
         [HttpPost("BookByIdDetails")]
+        [Authorize(Policy = "AdminOnly")]
 
         public async Task<ActionResult<Book>> CreateBookAsync([FromBody] Book book)
         {
@@ -151,6 +143,7 @@ namespace LibraryApi.Controllers
 
         // HTTP PUT
         [HttpPut("{id:int}")]
+        [Authorize(Policy = "AdminOnly")]
 
         public async Task<ActionResult<Book>> Put(int id, Book book)
         {
@@ -169,6 +162,7 @@ namespace LibraryApi.Controllers
         // HTTP DELETE
 
         [HttpDelete("{id:int}")]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<ActionResult<Book>> Delete(int id)
         {
             var book = await _unitOfWork.BookRepository.GetAsync(c => c.BookId == id);

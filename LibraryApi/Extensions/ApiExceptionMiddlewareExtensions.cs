@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Diagnostics;
 using System.Net;
 
-namespace LivrariaAPI.Extensions
+namespace LibraryApi.Extensions
 {
     public static class ApiExceptionMiddlewareExtensions
     {

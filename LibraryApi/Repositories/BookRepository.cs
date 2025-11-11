@@ -19,22 +19,6 @@ namespace LibraryApi.Repositories
             return booksByAuthor;
         }
 
-        public async Task<IEnumerable<Book>> GetBooksByGenreIdAsync(int id)
-        {
-            var books = await GetAllAsync();
-            var booksByGenre = books.Where(b => b.GenreId == id);
-            return booksByGenre;
-        }
-
-        public async Task<IEnumerable<Book>> GetBooksByGenreNameAsync(string genre)
-        {
-            return await _context.Books!
-                .Include(b => b.Genre)
-                .Where(b => b.Genre != null &&
-                            b.Genre.Name!.ToLower() == genre.ToLower())
-                .ToListAsync();
-        }
-
         public async Task<IEnumerable<Book>> GetBooksByYearLaunchAsync(int yearLaunch)
         {
             var books = await GetAllAsync();

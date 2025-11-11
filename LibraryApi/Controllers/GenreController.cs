@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using LibraryApi.DTO;
 using LibraryApi.Models;
 using LibraryApi.Repositories.UnitOfWork;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryApi.Controllers
@@ -31,6 +33,7 @@ namespace LibraryApi.Controllers
         }
 
         [HttpGet("GenreByIdDetails/{id}", Name = "GenreByIdDetails")]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<ActionResult<Genre>> GetGenreByIdAsync(int id)
         {
             var genre = await _unitOfWork.GenreRepository.GetAsync(g => g.GenreId == id);
@@ -54,8 +57,33 @@ namespace LibraryApi.Controllers
             return Ok(genre);
         }
 
+        [HttpGet("Genre/Books/GenreId/{genreId}")]
+        public async Task<ActionResult<IEnumerable<BookDTO>>> GetBooksByGenreIdAsync(int genreId)
+        {
+            var books = await _unitOfWork.GenreRepository.GetBooksByGenreIdAsync(genreId);
+            if (books == null || !books.Any())
+            {
+                return NotFound("Genre not found");
+            }
+            var booksDto = _mapper.Map<IEnumerable<BookDTO>>(books);
+            return Ok(booksDto);
+        }
+
+        [HttpGet("Genre/Books/GenreName/{genreName}")]
+        public async Task<ActionResult<IEnumerable<BookDTO>>> GetBooksByGenreNameAsync(string genreName)
+        {
+            var books = await _unitOfWork.GenreRepository.GetBooksByGenreNameAsync(genreName);
+            if (books == null || !books.Any())
+            {
+                return NotFound("Genre not found");
+            }
+            var booksDto = _mapper.Map<IEnumerable<BookDTO>>(books);
+            return Ok(booksDto);
+        }
+
         // HTTP POST
         [HttpPost("GenreByIdDetails")]
+        [Authorize(Policy = "AdminOnly")]
 
         public async Task<ActionResult<Genre>> CreateGenreAsync([FromBody] Genre genre)
         {
@@ -74,6 +102,7 @@ namespace LibraryApi.Controllers
 
         // HTTP PUT
         [HttpPut("{id:int}")]
+        [Authorize(Policy = "AdminOnly")]
 
         public async Task<ActionResult<Genre>> Put(int id, Genre genre)
         {
@@ -92,6 +121,7 @@ namespace LibraryApi.Controllers
         // HTTP DELETE
 
         [HttpDelete("{id:int}")]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<ActionResult<Genre>> Delete(int id)
         {
             var genre = await _unitOfWork.GenreRepository.GetAsync(c => c.GenreId == id);
