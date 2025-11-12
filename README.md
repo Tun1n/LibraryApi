@@ -10,7 +10,7 @@ Foi utilizado a língua inglesa para a elaboração do projeto a fim de manter u
 * Front-end: Responsável pela interface acessada pelo usuário e integração com a Api
 
 🛠️ Tecnologias Utilizadas
-- Backend: C#, ASP .NET CORE
+- Backend: C# (Net 8.0), ASP .NET CORE
 - Banco de Dados: MySQL
 - DevOps/Outros: Git
 - Documentação: Swagger
@@ -60,6 +60,14 @@ Este é um exemplo da estrutura de configuração necessária para a Api, inclui
   "AllowedHosts": "*"
 }
 ```
+
+
+🌍 Dependências do projeto
+
+<img width="378" height="214" alt="image" src="https://github.com/user-attachments/assets/61bedceb-308d-4927-9783-027cbd9b41cc" />
+
+
+
 
 
 
