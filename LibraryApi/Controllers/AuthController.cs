@@ -1,6 +1,7 @@
 ﻿using LibraryApi.DTOs;
 using LibraryApi.Models;
 using LibraryApi.Services;
+using LibraryApi.Validation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -74,7 +75,7 @@ namespace LibraryApi.Controllers
                 });
             }
 
-            return Unauthorized();
+            return NotFound("Unregistered user");
         }
 
         [HttpPost]
@@ -84,9 +85,16 @@ namespace LibraryApi.Controllers
             var emailExists = await _userManager.FindByEmailAsync(model.Email!);
             if(emailExists != null)
             {
+                _logger.LogInformation(1, "User email exists!");
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     new Response { Status = "Error", Message = "User email exists!" });
             }
+
+            if (!PasswordValidation.ValidatePassword(model.Password))
+            {
+                _logger.LogInformation(2, "The password must contain uppercase letters, lowercase letters, numbers and special characters!");
+                return BadRequest("The password must contain uppercase letters, lowercase letters, numbers and special characters");
+            };
    
             ApplicationUser user = new()
             {
@@ -98,10 +106,12 @@ namespace LibraryApi.Controllers
 
             if (!result.Succeeded)
             {
+                _logger.LogInformation(3, "User creation Failed!");
                 return StatusCode(StatusCodes.Status500InternalServerError,
                         new Response { Status = "Error", Message = "User creation Failed" });
             }
 
+            _logger.LogInformation(4, "User created successfully!");
             return Ok(new Response { Status = "Success", Message = "User created successfully" });
         }
 
@@ -111,7 +121,9 @@ namespace LibraryApi.Controllers
         public async Task<IActionResult> RefreshToken(TokenModel tokenModel)
         {
             if (tokenModel == null)
+                
             {
+                _logger.LogInformation(1,"Invalid client request!");
                 return BadRequest("Invalid client request");
             }
 
@@ -125,6 +137,7 @@ namespace LibraryApi.Controllers
 
             if (principal == null)
             {
+                _logger.LogInformation(2, "Invalid access token/refresh token!");
                 return BadRequest("Invalid access token/refresh token");
             }
 
@@ -135,7 +148,7 @@ namespace LibraryApi.Controllers
             if (user == null || user.RefreshToken != refreshToken
                              || user.RefreshTokenExpiryTime <= DateTime.Now)
             {
-
+                _logger.LogInformation(3, "Invalid access token/refresh token");
                 return BadRequest("Invalid access token/refresh token");
             }
 
@@ -147,6 +160,8 @@ namespace LibraryApi.Controllers
             user.RefreshToken = newRefreshToken;
 
             await _userManager.UpdateAsync(user);
+
+            _logger.LogInformation(4, "Token refreshed");
 
             return new ObjectResult(new
             {
@@ -165,6 +180,7 @@ namespace LibraryApi.Controllers
 
             if (user == null)
             {
+                _logger.LogInformation(1, "Invalid username");
                 return BadRequest("Invalid username");
             }
 
@@ -172,6 +188,7 @@ namespace LibraryApi.Controllers
 
             await _userManager.UpdateAsync(user);
 
+            _logger.LogInformation(2, "Revoked");
             return NoContent();
         }
 
@@ -200,6 +217,7 @@ namespace LibraryApi.Controllers
                 }
             }
 
+            _logger.LogInformation(3, "Role already exist");
             return StatusCode(StatusCodes.Status400BadRequest,
                 new Response { Status = "Error", Message = "Role already exist" });
         }
@@ -223,7 +241,7 @@ namespace LibraryApi.Controllers
                 }
                 else
                 {
-                    _logger.LogInformation(1, $"Error: Unable to add user to the {roleName} role");
+                    _logger.LogInformation(2, $"Error: Unable to add user to the {roleName} role");
                     return StatusCode(StatusCodes.Status400BadRequest, new Response
                     {
                         Status = "Error",
@@ -232,6 +250,8 @@ namespace LibraryApi.Controllers
                     });
                 }
             }
+
+            _logger.LogInformation(3, $"Unable to find user");
             return BadRequest(new { error = "Unable to find user" });
         }
 
@@ -244,14 +264,14 @@ namespace LibraryApi.Controllers
             var user = await _userManager.FindByEmailAsync(email);
             if (user == null)
             {
-                _logger.LogWarning("User not found");
+                _logger.LogError(1,"User not found");
                 return NotFound(new { message = "User not found" });
             }
 
             var result = await _userManager.DeleteAsync(user);
             if (!result.Succeeded)
             {
-                _logger.LogError("Error deleting user");
+                _logger.LogError(2,"Error deleting user");
                 return StatusCode(500, new
                 {
                     message = "Error deleting user",
@@ -259,7 +279,7 @@ namespace LibraryApi.Controllers
                 });
             }
 
-            _logger.LogInformation("User deleted");
+            _logger.LogInformation(3,"User deleted");
             return Ok(new { message = "User deleted" });
         }
 
@@ -271,14 +291,16 @@ namespace LibraryApi.Controllers
             var role = await _roleManager.FindByNameAsync(roleName);
             if (role == null)
             {
-                _logger.LogWarning("Role not found");
+                _logger.LogInformation(1,"Role not found");
                 return NotFound(new { message = "Role not found" });
             }
                 
             var result = await _roleManager.DeleteAsync(role);
 
-            if (result.Succeeded)
+            if (result.Succeeded) {
+                _logger.LogInformation(2, "Role deleted");
                 return Ok($"Role '{roleName}' deleted");
+            }
             else
                 return BadRequest(result.Errors);
         }

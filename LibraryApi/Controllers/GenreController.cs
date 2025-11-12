@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using LibraryApi.DTO;
 using LibraryApi.Models;
+using LibraryApi.Pagination;
 using LibraryApi.Repositories.UnitOfWork;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,18 @@ namespace LibraryApi.Controllers
             }
 
             return Ok(genres);
+        }
+        [HttpGet("GenresPagination")]
+        public async Task<ActionResult<IEnumerable<GenreDTO>>> GetGenresPagination([FromQuery] GenresParameters genresParameters)
+        {
+            var genres = await _unitOfWork.GenreRepository.GetAllGenresPaginationAsync(genresParameters);
+            if (genres == null || !genres.Any()) {
+                return NotFound("Genres not found");
+            }
+
+            var genresDto = _mapper.Map<IEnumerable<GenreDTO>>(genres);
+
+            return Ok(genresDto);
         }
 
         [HttpGet("GenreByIdDetails/{id}", Name = "GenreByIdDetails")]

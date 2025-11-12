@@ -1,5 +1,6 @@
 ﻿using LibraryApi.Context;
 using LibraryApi.Models;
+using LibraryApi.Pagination;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -10,6 +11,14 @@ namespace LibraryApi.Repositories
         public BookRepository(AppDbContext context) : base(context)
         {
 
+        }
+
+        public async Task<IEnumerable<Book>> GetAllBooksPaginationAsync(BooksParameters booksParameters)
+        {
+            var books = await GetAllAsync();
+            return books.OrderBy(c => c.Title)
+                .Skip((booksParameters.PageNumber - 1) * booksParameters.PageSize)
+                .Take(booksParameters.PageSize).ToList();
         }
 
         public async Task<IEnumerable<Book>> GetBooksByAuthorAsync(string author)
@@ -31,7 +40,6 @@ namespace LibraryApi.Repositories
             var books = await GetAllAsync();
             var booksByYearRange = books.Where(b => b.YearLaunch >= startYear && b.YearLaunch <= endYear);
             return booksByYearRange;
-
         }
     }
 }

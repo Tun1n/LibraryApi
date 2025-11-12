@@ -1,5 +1,5 @@
 ﻿using LibraryApi.Models;
-using System.Reflection;
+using LibraryApi.Pagination;
 
 namespace LibraryApi.Repositories
 {
@@ -8,5 +8,6 @@ namespace LibraryApi.Repositories
         Task<IEnumerable<Genre>> GetGenresByNameAsync(string genre);
         Task<IEnumerable<Book>> GetBooksByGenreNameAsync(string genre);
         Task<IEnumerable<Book>> GetBooksByGenreIdAsync(int id);
+        Task<IEnumerable<Genre>> GetAllGenresPaginationAsync(GenresParameters genresParameters);
     }
 }

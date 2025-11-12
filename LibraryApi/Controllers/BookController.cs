@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using LibraryApi.DTO;
 using LibraryApi.Models;
+using LibraryApi.Pagination;
 using LibraryApi.Repositories.UnitOfWork;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -34,6 +35,19 @@ namespace LibraryApi.Controllers
                 return NotFound("Book not found"); ;
             }
             return Ok(books);
+        }
+
+        [HttpGet("BooksPagination")]
+        public async Task<ActionResult<IEnumerable<BookDTO>>> GetBooksPagination([FromQuery] BooksParameters booksParameters)
+        {
+            var books = await _unitOfWork.BookRepository.GetAllBooksPaginationAsync(booksParameters);
+            if(books == null)
+            {
+                return NotFound("Books not found");
+            }
+            var booksDto = _mapper.Map<IEnumerable<BookDTO>>(books);
+
+            return Ok(booksDto);
         }
 
 

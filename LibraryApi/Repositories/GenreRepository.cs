@@ -1,5 +1,6 @@
 ﻿using LibraryApi.Context;
 using LibraryApi.Models;
+using LibraryApi.Pagination;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -33,6 +34,14 @@ namespace LibraryApi.Repositories
                 .Where(b => b.Genre != null &&
                             b.Genre.GenreId == id)
                 .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Genre>> GetAllGenresPaginationAsync(GenresParameters genresParameters)
+        {
+            var genres = await GetAllAsync();
+            return genres.OrderBy(c => c.Name)
+                                         .Skip((genresParameters.PageNumber - 1) * genresParameters.PageSize)
+                                         .Take(genresParameters.PageSize).ToList();     
         }
     }   
 }
