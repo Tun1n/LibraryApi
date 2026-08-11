@@ -146,10 +146,12 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 
-builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration
-{
-    LogLevel = LogLevel.Information
-}));
+var fileLogConfig = builder.Configuration
+    .GetSection("FileLogging")
+    .Get<CustomLoggerProviderConfiguration>()
+    ?? new CustomLoggerProviderConfiguration();
+
+builder.Logging.AddProvider(new CustomLoggerProvider(fileLogConfig));
 
 
 

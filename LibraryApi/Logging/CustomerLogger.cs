@@ -31,7 +31,14 @@
 
         private void WriteTextInFile(string message)
         {
-            string filePath = @"C:\Users\slped\Desktop\LibraryAPI\Solution1\LibraryApi\Log.txt";
+            string filePath = string.IsNullOrWhiteSpace(loggerConfig.FilePath)
+                ? Path.Combine(Directory.GetCurrentDirectory(), "Log.txt")
+                : Path.IsPathRooted(loggerConfig.FilePath)
+                    ? loggerConfig.FilePath
+                    : Path.Combine(Directory.GetCurrentDirectory(), loggerConfig.FilePath);
+
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
+
             using (StreamWriter streamWriter = new StreamWriter(filePath, true))
             {
                 try

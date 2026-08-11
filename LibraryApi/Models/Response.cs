@@ -1,4 +1,4 @@
-﻿namespace LibraryApi.DTOs;
+﻿namespace LibraryApi.Models;
 
 public class Response
 {

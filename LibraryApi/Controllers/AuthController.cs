@@ -1,12 +1,9 @@
-﻿using LibraryApi.DTOs;
-using LibraryApi.Models;
+﻿using LibraryApi.Models;
 using LibraryApi.Services;
 using LibraryApi.Validation;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 

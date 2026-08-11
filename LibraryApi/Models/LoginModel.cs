@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace LibraryApi.DTOs;
+namespace LibraryApi.Models;
 
 public class LoginModel
 {
