@@ -94,6 +94,16 @@ builder.Services.AddRateLimiter(options =>
                             }));
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
@@ -165,9 +175,12 @@ if (app.Environment.IsDevelopment())
     app.ConfigureExceptionHandler();
 }
 
+app.UseCors("AllowAll");
+
 app.UseHttpsRedirection();
 app.UseRateLimiter();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
